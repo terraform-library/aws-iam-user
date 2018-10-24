@@ -23,16 +23,6 @@ output "this_iam_access_key_id" {
   value       = "${element(concat(aws_iam_access_key.key.*.id, list("")), 0)}"
 }
 
-output "this_iam_access_key_key_fingerprint" {
-  description = "The fingerprint of the PGP key used to encrypt the secret"
-  value       = "${element(concat(aws_iam_access_key.key.*.key_fingerprint, list("")), 0)}"
-}
-
-output "this_iam_access_key_encrypted_secret" {
-  description = "The encrypted secret, base64 encoded"
-  value       = "${element(concat(aws_iam_access_key.key.*.encrypted_secret, list("")), 0)}"
-}
-
 output "this_iam_access_key_ses_smtp_password" {
   description = "The secret access key converted into an SES SMTP password"
   value       = "${element(concat(aws_iam_access_key.key.*.ses_smtp_password, list("")), 0)}"
