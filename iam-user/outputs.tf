@@ -23,16 +23,6 @@ output "this_iam_access_key_id" {
   value       = "${module.iam_user.this_iam_access_key_id}"
 }
 
-output "this_iam_access_key_key_fingerprint" {
-  description = "The fingerprint of the PGP key used to encrypt the secret"
-  value       = "${module.iam_user.this_iam_access_key_key_fingerprint}"
-}
-
-output "this_iam_access_key_encrypted_secret" {
-  description = "The encrypted secret, base64 encoded"
-  value       = "${module.iam_user.this_iam_access_key_encrypted_secret}"
-}
-
 output "this_iam_access_key_ses_smtp_password" {
   description = "The secret access key converted into an SES SMTP password"
   value       = "${module.iam_user.this_iam_access_key_ses_smtp_password}"
